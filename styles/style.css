@@ -1,0 +1,72 @@
+@import url("https://fonts.googleapis.com/css2?family=VT323&display=swap");
+
+:root {
+  --console-share: 80%;
+  --option-share: 19%;
+  --gap: 1%;
+}
+
+.container[data-theme="classic"] {
+  --background: black;
+  --font: gray;
+}
+
+.container[data-theme="matrix"] {
+  --background: black;
+  --font: rgb(0, 255, 0);
+}
+
+.container[data-theme="powershell"] {
+  --background: rgb(1, 36, 86);
+  --font: rgb(238, 237, 240);
+}
+
+.container[data-theme="custom"] {
+  --background: initial;
+  --font: initial;
+}
+
+* {
+  box-sizing: border-box;
+  overflow: hidden;
+  padding: 0;
+  margin: 0;
+  outline: none;
+  font-family: "VT323", monospace;
+}
+
+.container {
+  width: 100vw;
+  height: 100vh;
+  padding: 1vh 1vw;
+  border: none;
+  resize: none;
+  background-color: var(--background);
+  color: var(--font);
+  display: grid;
+  grid-template-columns: var(--console-share) var(--option-share);
+  gap: var(--gap);
+}
+
+#console {
+  word-break: break-all;
+  padding: 0.5vh 0.5vw;
+  border: 3px ridge var(--font);
+}
+
+.command {
+  font-size: large;
+}
+
+.command > .locator {
+  margin-right: 0.1vw;
+}
+
+.header {
+  font-size: 1.2em;
+}
+
+.options {
+  padding: 0.5vh 0.5vw;
+  border: 3px ridge var(--font);
+}
