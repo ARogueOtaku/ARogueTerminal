@@ -53,7 +53,7 @@ async function playMusic(...args) {
       insertLine("Usage: play [-id|-st] [videoid|searchterm]");
       break;
     case undefined:
-      await play(music);
+      await play(music, undefined, undefined, currentQueue);
       break;
     default:
       await playBySearchTerm(music, args[0], currentQueue);
