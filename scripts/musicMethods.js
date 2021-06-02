@@ -1,7 +1,7 @@
 //Current Queue
 let currentQueue = [];
 let currentMusic = { videoID: "", title: "" };
-let loopType = 0;
+let loopType = 1;
 let currentQueuePos = 0;
 let queuePlaying = false;
 let playlists = [];
